@@ -31,7 +31,7 @@ MANIFEST
 *.pyc
 __pycache__/
 local_settings.py
-user/migrations
+src/user/migrations
 
 
 # PyInstaller

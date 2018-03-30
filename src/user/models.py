@@ -2,7 +2,7 @@ from django.core.validators import MaxValueValidator
 from django.db import models
 from django.db.models.signals import pre_save
 
-from user.utils import unique_slug_generator
+from .utils import unique_slug_generator
 
 
 class User(models.Model):
