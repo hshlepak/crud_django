@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+
+{% block main %}
+    <form method="GET" action="" id="searchform">
+        <input class="searchfield" id="searchbox" name="search" type="text" value="{{ request.GET.search }}" placeholder="Search by all fields..."/>
+    </form>
+    <br>
+    <h3><a href='/users/'>ALL USERS</a></h3>
+    <table>
+        <tr>
+            <th><a href="?order_by=name">Name</a></th>
+            <th><a href="?order_by=street">Address</a></th>
+            <th><a href="?order_by=email">Email</a></th>
+            <th><a href="?order_by=phone_number">Phone Number</a></th>
+        </tr>
+        {% for obj in object_list %}
+            <tr>
+                <td><a href='/users/{{ obj.slug }}/'>{{ obj.name }}</a></td>
+                <td>{{ obj.address }}</td>
+                <td>{{ obj.email }}</td>
+                <td>{{ obj.phone_number }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <hr>
+    <a class="btn btn-dark" href="{% url 'add_user' %}" role="button">Add User</a>
+{% endblock %}

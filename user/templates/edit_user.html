@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+
+{% block main %}
+    <h3>EDIT CLIENT</h3>
+    <form method='POST'> {% csrf_token %}
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type='submit' class="btn btn-dark">Save</button>
+    </form>
+    <hr>
+    <a class="btn btn-dark" href="/users/" role="button">Back</a>
+{% endblock %}

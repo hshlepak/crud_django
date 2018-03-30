@@ -1,0 +1,29 @@
+h3 {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 20px;
+}
+
+th {
+    text-align: center;
+}
+
+
+p {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 20px;
+}

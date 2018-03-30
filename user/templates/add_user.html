@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+
+{% block main %}
+    <h3>ADD USER</h3>
+    {% if form.errors.non_field_errors %}
+    {{ form.errors.non_field_errors }}
+    {% endif %}
+    <form method='POST'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type='submit' class="btn btn-dark">Save</button>
+        <hr>
+        <a class="btn btn-dark" href="/users/" role="button">Back</a>
+    </form>
+{% endblock %}
